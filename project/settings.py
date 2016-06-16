@@ -198,7 +198,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(PROJECT_ROOT, "templates")
+            os.path.join(PROJECT_ROOT, "books/templates")
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -229,7 +229,10 @@ if DJANGO_VERSION < (1, 9):
 # APPLICATIONS #
 ################
 
+# TEMPLATE_DIRS = [TEMPLATES[0]['DIRS'][0]]
+
 INSTALLED_APPS = (
+    'books',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -252,6 +255,7 @@ INSTALLED_APPS = (
     'photologue',
     'sortedm2m',
     'friendship',
+    
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
